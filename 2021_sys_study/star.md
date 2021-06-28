@@ -5,3 +5,8 @@
 3. The difference between strcpy() and strdup() is that malloc() is used when user call strdup().
 4. It is recommended to set the minimum byte for read and write to 512 bytes.
 5. If user use malloc, realloc can be uesd for convenience.
+6. The struct dirent is structured like this. Also, the format of the file can be known by d_type.
++ struct dirent
+<img width="529" alt="스크린샷 2021-06-28 오후 8 17 53" src="https://user-images.githubusercontent.com/70479118/123628328-ecb07200-d84d-11eb-8fd1-a02c4cad84e3.png">
++d_type
+<img width="409" alt="스크린샷 2021-06-28 오후 8 20 05" src="https://user-images.githubusercontent.com/70479118/123628587-3c8f3900-d84e-11eb-8f37-4e8cc72e1f1d.png">
