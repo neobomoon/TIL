@@ -16,14 +16,21 @@
 ### Tuesday, June 29, 2021
 1. Today I studied about fread(), fwrite(). 
 + size_t fread(void * prt, size_t size, size_t count, FILE * fp) ;
+
 ptr : Pointer of the buffer with a size of the at least (size * count).
+
 size : Size of one element.
+
 count : Number of elements to read.
+
 fp : Pointer of FILE.
+
 return value : The total number of elements successfully read.
+
 ex : fread(buffer, 1, count, fp) ;
 
 + fwrite(void * ptr, size_t size, size_t count, FILE * fp) ;
+
 ptr : Pointer of the buffer to be written
 size : Size of one element to be written.
 count : Number of elements to be written.
