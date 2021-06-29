@@ -19,31 +19,32 @@
 1. Today I studied about fread(), fwrite(). 
 + size_t fread(void * prt, size_t size, size_t count, FILE * fp) ;
 
-ptr : Pointer of the buffer with a size of the at least (size * count).
+  ptr : Pointer of the buffer with a size of the at least (size * count).
 
-size : Size of one element.
+  size : Size of one element.
 
-count : Number of elements to read.
+  count : Number of elements to read.
 
-fp : Pointer of FILE.
+  fp : Pointer of FILE.
 
-return value : The total number of elements successfully read.
+  return value : The total number of elements successfully read.
 
-ex : fread(buffer, 1, count, fp) ;
+  ex : fread(buffer, 1, sizeof(buffer), fp) ;
 
 
 + fwrite(void * ptr, size_t size, size_t count, FILE * fp) ;
 
-ptr : Pointer of the buffer to be written
+  ptr : Pointer of the buffer to be written
 
-size : Size of one element to be written.
+  size : Size of one element to be written.
 
-count : Number of elements to be written.
+  count : Number of elements to be written.
 
-fp : Pointer of FILE.
+  fp : Pointer of FILE.
 
-return value : The total number of elements successfully written.
+  return value : The total number of elements successfully written.
 
+  ex : fwrite(buffer, 1, sizeof(buffer), fp);
 
 2. I leared about 'goto' instruction. This simplifies the code when handling errors and increases readability.
 + goto
