@@ -17,7 +17,7 @@
 + d_type
 <img width="409" alt="스크린샷 2021-06-28 오후 8 20 05" src="https://user-images.githubusercontent.com/70479118/123628587-3c8f3900-d84e-11eb-8f37-4e8cc72e1f1d.png">
 
-
+----------------------------------------------
 ### Tuesday, June 29, 2021
 1. Today I studied about fread(), fwrite(). 
 + size_t fread(void * prt, size_t size, size_t count, FILE * fp) ;
