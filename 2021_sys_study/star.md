@@ -61,6 +61,7 @@
 1. What is socket? Communication between programs on a network. Therefore, nowdays most of the computer networks use socket for communicate each other. And there are some data structure and function which can help socket.
 
 2. Flow of TCP/IP
+
 ![image](https://user-images.githubusercontent.com/70479118/123979229-7f424400-d9fb-11eb-94c3-c347a3c80a06.png)
 
 3. int socket(int domain, int type, int protocol) ;
