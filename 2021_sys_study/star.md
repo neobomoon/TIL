@@ -120,8 +120,7 @@
 + Solution code.
 <img width="343" alt="스크린샷 2021-07-01 오후 10 57 56" src="https://user-images.githubusercontent.com/70479118/124136481-cabe2600-dabf-11eb-960f-8a6bba4aafc4.png">
 + What I understand.
-![IMG_0553](https://user-images.githubusercontent.com/70479118/124138978-21c4fa80-dac2-11eb-8900-cc0db10c6d6b.jpg)
+IMG_C246B742BE98-1.jpeg![IMG_C246B742BE98-1](https://user-images.githubusercontent.com/70479118/124142125-eb3caf00-dac4-11eb-9592-49671945d873.jpeg)
 
-
-IMG_0553.jpg![IMG_0553](https://user-images.githubusercontent.com/70479118/124139161-51740280-dac2-11eb-8678-4c962830586d.jpg)
-
+So, In main(), the data which type is pointer should be used to call test() function by argument with reference which means '&'.
+When do malloc() in test(), the argument should be dereference. Therefore, after finished test() function, data variable which declared in main() can not occurs segmentation fault.
