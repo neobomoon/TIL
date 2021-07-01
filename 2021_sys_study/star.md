@@ -110,8 +110,15 @@
     Pointer of the structure containing the address of the client.
 + socklen_t * addrlen
     The sizeof(addr) is entered.
-    
-    
-  
-    
+----------------------------------------------
 
+
+# Thursday, July 1, 2021
+1. Until now, I don't fully understand  about 'pointer" in C language. So I confused when using double pointer in sys_study time. After search the pointer concept in C, I cleared up some confusing concepts and make a diagram which help makes sense by myself.
++ What I confused. When I run this code, Segmentfault is occured.
+<img width="348" alt="스크린샷 2021-07-01 오후 10 54 52" src="https://user-images.githubusercontent.com/70479118/124136046-5d11fa00-dabf-11eb-8b49-c43c29806cca.png">
++ Solution code.
+<img width="343" alt="스크린샷 2021-07-01 오후 10 57 56" src="https://user-images.githubusercontent.com/70479118/124136481-cabe2600-dabf-11eb-960f-8a6bba4aafc4.png">
++ What I understand.
+![image](https://user-images.githubusercontent.com/70479118/124138744-ea564e00-dac1-11eb-8960-ea2edffcd372.png)
+So, 
