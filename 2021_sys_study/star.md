@@ -120,5 +120,6 @@
 + Solution code.
 <img width="343" alt="스크린샷 2021-07-01 오후 10 57 56" src="https://user-images.githubusercontent.com/70479118/124136481-cabe2600-dabf-11eb-960f-8a6bba4aafc4.png">
 + What I understand.
-![image](https://user-images.githubusercontent.com/70479118/124138744-ea564e00-dac1-11eb-8960-ea2edffcd372.png)
-So, 
+![IMG_0553](https://user-images.githubusercontent.com/70479118/124138978-21c4fa80-dac2-11eb-8900-cc0db10c6d6b.jpg)
+
+
