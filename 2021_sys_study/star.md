@@ -120,7 +120,7 @@
 + Solution code.
 <img width="343" alt="스크린샷 2021-07-01 오후 10 57 56" src="https://user-images.githubusercontent.com/70479118/124136481-cabe2600-dabf-11eb-960f-8a6bba4aafc4.png">
 + What I understand.
-![IMG_C246B742BE98-1](https://user-images.githubusercontent.com/70479118/124142913-9cdbe000-dac5-11eb-8d69-100a42377633.jpeg)
+<img width="636" alt="스크린샷 2021-07-01 오후 11 42 30" src="https://user-images.githubusercontent.com/70479118/124143341-0360fe00-dac6-11eb-8263-9c4738ed3ecf.png">
 
 
 So, In main(), the data which type is pointer should be used to call test() function by argument with reference which means '&'.
