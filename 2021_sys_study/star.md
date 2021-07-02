@@ -1,4 +1,4 @@
-#star TIL
+# star TIL
 # Monday, June 28, 2021
 1. Until now, I did't know about that the simplicity of code is important thing. Today I realized its importance.
 
@@ -124,4 +124,65 @@
 
 
 So, In main(), the data which type is pointer should be used to call test() function by argument with reference which means '&'.
-When do malloc() in test(), the argument should be dereference. Therefore, after finished test() function, data variable which declared in main() can not occurs segmentation fault.
+When do malloc() in test(), the argument should be dereference. Therefore, after finished test() function, data variable which declared in main() can not occurs segmentation fault.=
+----------------------------------------------
+
+
+
+# Friday, July 2, 2021 : Socket programming in client
+1. About struct sockaddr_in
++ struct
+struct sockaddr_in{
+    short sin_family ; // 주소체계 : AF_INET (IPv4) 사용
+    u_short sin_port ; // 포트번호
+    struct in_addr sin_addr ; // IP 주소
+    char sin_zero[8] ; // dummy 값 (구조체 크기를 16bytes로 맞추기 위해. 꼭 '0'으로 채우기
+}
+ex)
+struct sockaddr_in sock_addr ;
+
++ Initialize sock_addr through memset()
+ex)
+memset(&sock_addr, '0', sizeof(sock_addr)) ;
+
++ Set sin_port through htons(). htons is 'Host to Network' and 's' means short(2bytes).
+ex)
+sock_addr.sin_port = htons(8080) ;
+
++ Set sin_addr through inet_pton(). pton is 'Pointer to Number'. Thus, IP arrays is turned to binary. If IP is vaild value, it returns 1. If IP is not vaild value, it returns 0. If IP is not proper address_family, it returns -1.
+ex)
+inet_pton(AF_INET, "127.0.0.1", &sock_addr.sin_addr)
+
+2. How to ues socket programming
++ Frist, Open file descriptor through socket() function. If that function succeeds, it returns 0 or more becuase it is file descriptor. If that function fails, it returns -1.
+ex)
+int sock_fd = socket(AF_INET, SOCK_STREAM, 0) ;
+if(sock_fd < 0){
+    perror("fail to socket") ;
+    exit(1) ;
+}
+
++connet() function requests to server for connection using socket descriptor. And it returns 0 on success and -1 on failure.
+ex)
+if(connect(sock_fd, (struct sockaddr * ) &sock_addr, sizeof(sock_addr)) < 0){
+    perror("fail to connect") ;
+    exit(1) ;
+}
+
++ send() function sends data to server. And It returns the number of bytes which function sends. However, we need to prepare for one case that some data is not sent.(Do double check)
+ex)
+char buf[1024] = "test" ;
+char * data = buf ;
+int s ;
+int len = strlen(buf) ;
+while(len > 0 && (s = send(sock_fd, data, 1023, 0)) > 0) { // 1023은 NULL을 넣을 공간을 위해
+    data += s ;
+    len -= s;
+}
+
++ shutdown() function can close write side/read side/both on sock_fd. If the write side is closed, then server starts recive the data from client. And it returns 0 on succeess and returns -1 on failure.
+ex)
+if(shutdown(sock_fd, SHUT_WR) != 0){
+    perror("fail to shutdonw") ;
+    exit(1) ;
+}
