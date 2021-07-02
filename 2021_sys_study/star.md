@@ -132,8 +132,8 @@ When do malloc() in test(), the argument should be dereference. Therefore, after
 # Friday, July 2, 2021 : Socket programming in client
 1. About struct sockaddr_in
 + struct
-'''
-struct sockaddr_in{
+₩₩₩
+struct sockaddr_in {
 
     short sin_family ; // 주소체계 : AF_INET (IPv4) 사용
     
@@ -144,7 +144,8 @@ struct sockaddr_in{
     char sin_zero[8] ; // dummy 값 (구조체 크기를 16bytes로 맞추기 위해. 꼭 '0'으로 채우기
     
 }
-'''
+₩₩₩
+
 
 ex)
 struct sockaddr_in sock_addr ;
