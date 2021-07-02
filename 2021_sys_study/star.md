@@ -133,10 +133,15 @@ When do malloc() in test(), the argument should be dereference. Therefore, after
 1. About struct sockaddr_in
 + struct
 struct sockaddr_in{
+
     short sin_family ; // 주소체계 : AF_INET (IPv4) 사용
+    
     u_short sin_port ; // 포트번호
+    
     struct in_addr sin_addr ; // IP 주소
+    
     char sin_zero[8] ; // dummy 값 (구조체 크기를 16bytes로 맞추기 위해. 꼭 '0'으로 채우기
+    
 }
 ex)
 struct sockaddr_in sock_addr ;
