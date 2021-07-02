@@ -141,7 +141,6 @@ struct sockaddr_in {
     u_short sin_port ; // 포트번호
     
     struct in_addr sin_addr ; // IP 주소
-    
     char sin_zero[8] ; // dummy 값 (구조체 크기를 16bytes로 맞추기 위해. 꼭 '0'으로 채우기
     
 }
